@@ -1,12 +1,12 @@
 ---
-- name: configure customer VLAN  on all switches
-  connection: local
-  gather_facts: False
-  hosts: switches
-  vars_files:
-  - creds.yml
-  - "{{custfile}}"
-  #- ports.yml
+  - name: configure customer VLAN  on all switches
+    connection: local
+    gather_facts: False
+    hosts: switches
+    vars_files:
+    - creds.yml
+    - "{{custfile}}"
+    #- ports.yml
 
 
   tasks:
