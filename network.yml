@@ -1,7 +1,0 @@
----
-
-  - name: apply vlan configs
-    hosts: switches
-  
-    roles:
-      - category_switches

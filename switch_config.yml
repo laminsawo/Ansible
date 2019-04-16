@@ -1,0 +1,8 @@
+-
+  name: set switch configs
+  hosts: switches
+  roles:
+    - switches
+  vars:
+    - creds.yml
+    - variables.yml

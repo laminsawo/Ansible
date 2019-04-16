@@ -1,0 +1,11 @@
+edgeports:
+  - {sw: 192.168.0.252, port: FastEthernet0/11}
+  - {sw: 192.168.0.252, port: FastEthernet0/12}
+
+
+coretrunks:
+  - {sw: 192.168.0.252, port: FastEthernet0/9}
+  - {sw: 192.168.0.252, port: FastEthernet0/10}
+
+customername: FUZZBEAR
+vlan: 200
