@@ -22,6 +22,18 @@
       name: "configure edge ports"
       when: "(item.sw == inventory_hostname)"
       with_items: "{{edgeports}}"
+
+    - ios_config:
+      lines:
+        - "description my description"
+        - "speed auto"
+        - "duplex auto"
+      parents:
+        - "interface {{'FastEthernet 0/13'}}"
+      provider: "{{priovider}}"
+    name: "Apply basic interfaces config"
+
+
     - 
       ios_config: 
         lines: 

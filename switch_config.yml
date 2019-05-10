@@ -5,4 +5,4 @@
     - switches
   vars:
     - creds.yml
-    - variables.yml
+    - switches/vars/variables.yml

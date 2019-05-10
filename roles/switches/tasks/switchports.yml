@@ -1,6 +1,7 @@
 edgeports:
-  - {sw: 192.168.0.252, port: FastEthernet0/11}
+  - {sw: 12.168.0.252, port: FastEthernet0/11}
   - {sw: 192.168.0.252, port: FastEthernet0/12}
+  - {sw: 192.168.0.252, port: FastEthernet0/13}
 
 
 coretrunks:
