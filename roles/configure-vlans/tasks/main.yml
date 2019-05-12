@@ -1,3 +1,9 @@
 ---
-- include: configure_vlans.yml
-- include: ports.yml
+  tasks:
+  - name: create vlan
+    ios_config:
+      provider: "{{provider}}"
+      lines:
+      - name {{customername}}
+      parents:
+      - vlan {{vlan}}   

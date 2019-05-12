@@ -1,8 +1,27 @@
--
-  name: set switch configs
+---
+- name: configure customer VLAN  on all switches
+  connection: local
+  gather_facts: False
   hosts: switches
+  vars_files:
+  - creds.yml
+  - "{{custfile}}"
+    
+  tasks: 
+  - 
+    name: "configure provider"
+    set_fact: 
+      provider: 
+        host: "{{inventory_hostname}}"
+        password: "{{password}}"
+        username: "{{username}}"
+  
   roles:
-    - switches
-  vars:
-    - creds.yml
-    - switches/vars/variables.yml
+  - {role: configure-name-servers}
+  - {role: configure-snmp}
+  - {role: configure-vlans}
+  - {role: configure-trunks}
+
+
+
+
