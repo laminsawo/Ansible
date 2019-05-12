@@ -1,6 +1,0 @@
--
-vars: 
-- creds.yml
-- "{{custfile}}"
-- switchports.yml
-
